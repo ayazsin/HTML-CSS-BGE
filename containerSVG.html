@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .containerSVG {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      path {
+        stroke-dasharray: 1177;
+        fill: red;
+        animation: traceSVG 4s normal infinite;
+      }
+
+      @keyframes traceSVG {
+        0% {
+          stroke-dashoffset: 1177;
+          fill-opacity: 0;
+        }
+        50% {
+          stroke-dashoffset: 0;
+          fill-opacity: 1;
+        }
+
+        100% {
+          stroke-dashoffset: 1177;
+          fill-opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containerSVG">
+      <svg
+        width="640"
+        height="480"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 480"
+      >
+        <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+        <g class="layer">
+          <title>Layer 1</title>
+          <path
+            d="m119,211l108,-90l118,73l99,-74l104,75l-202,249l-227,-233z"
+            fill="none"
+            id="svg_4"
+            stroke="#000000"
+            stroke-width="5"
+          />
+        </g>
+      </svg>
+    </div>
+    <script>
+      let path01 = document.querySelector("path:first-of-type");
+      //   let path02 = document.querySelector("path:nth-of-type");
+      let pathLength = path01.getTotalLength();
+      console.log(pathLength);
+    </script>
+  </body>
+</html>
